@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OneTimeRequest1.OneTimeWorkRequestActivity">
+    tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonEnqueue"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_onetimerequest"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="One Time Request"
-        android:textAllCaps="false" />
+        android:layout_marginTop="16dp"
+        android:text="@string/one_time_request"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/btn_periodicrequest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/periodic_request"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_onetimerequest" />
+
+    <Button
+        android:id="@+id/btn_receivedata"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/receive_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_periodicrequest" />
+
+    <Button
+        android:id="@+id/btn_senddata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_data"
+        app:layout_constraintTop_toBottomOf="@+id/btn_receivedata"
+        tools:layout_editor_absoluteX="180dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SendingData3.SendingAndReceiving">
+    tools:context=".SendingData3.SendingAndReceivingActivity">
 
     <TextView
         android:id="@+id/textViewStatus"

@@ -19,7 +19,7 @@ class RecevingWoker(context: Context, workerParams: WorkerParameters) :
         val data = Data.Builder()
             .putString(TASK_DESC, "The conclusion of the task")
             .build()
-        // setOutputData(data);
+//         setOutputData(data)
         return Result.success()
     }
 

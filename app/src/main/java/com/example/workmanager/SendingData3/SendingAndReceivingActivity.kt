@@ -13,7 +13,7 @@ import com.example.workmanager.R
 import com.example.workmanager.SendingData3.ReceiveWorker
 import kotlinx.android.synthetic.main.activity_sending_and_receiving.*
 
-class SendingAndReceiving : AppCompatActivity() {
+class SendingAndReceivingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sending_and_receiving)
@@ -23,10 +23,12 @@ class SendingAndReceiving : AppCompatActivity() {
         val workRequest = OneTimeWorkRequest.Builder(ReceiveWorker::class.java)
             .setInputData(data)
             .build()
-        buttonEnqueue.setOnClickListener{
+        buttonEnqueue.setOnClickListener {
             WorkManager.getInstance().enqueue(workRequest)
         }
         WorkManager.getInstance().getWorkInfoByIdLiveData(workRequest.id)
-            .observe(this, Observer { workInfo -> textViewStatus.append(workInfo!!.state.name + "\n") })
+            .observe(
+                this,
+                Observer { workInfo -> textViewStatus.append(workInfo!!.state.name + "\n") })
     }
 }

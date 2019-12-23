@@ -3,4 +3,8 @@
     <string name="periodic_work_request">Periodic work request</string>
     <string name="receiving_data">receiving data</string>
     <string name="send_receive">send/receive</string>
+    <string name="one_time_request">One Time Request</string>
+    <string name="periodic_request">Periodic Request</string>
+    <string name="receive_data">Receive Data</string>
+    <string name="send_data">Send Data</string>
 </resources>

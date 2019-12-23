@@ -30,6 +30,9 @@ class PeriodicWorkRequestActivity : AppCompatActivity() {
         buttonEnqueue.setOnClickListener{
             WorkManager.getInstance().enqueue(oneTimeWorkRequest)
         }
+
+
+
         WorkManager.getInstance().getWorkInfoByIdLiveData(oneTimeWorkRequest.id)
             .observe(this, Observer { workInfo -> textViewStatus.append(workInfo!!.state.name + "\n") })
     }
