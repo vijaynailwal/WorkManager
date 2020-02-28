@@ -25,13 +25,14 @@ class PeriodicWorkRequestActivity : AppCompatActivity() {
         val data = Data.Builder()
             .putString("task_desc", "The task data passed from MainActivity").build()
         Log.e("data1", data.getString("task_desc"))
+
+
+
         val oneTimeWorkRequest =
             OneTimeWorkRequest.Builder(PeriodicWork::class.java).setInputData(data).build()
         buttonEnqueue.setOnClickListener{
             WorkManager.getInstance().enqueue(oneTimeWorkRequest)
         }
-
-
 
         WorkManager.getInstance().getWorkInfoByIdLiveData(oneTimeWorkRequest.id)
             .observe(this, Observer { workInfo -> textViewStatus.append(workInfo!!.state.name + "\n") })

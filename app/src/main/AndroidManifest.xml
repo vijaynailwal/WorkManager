@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".Constraints5.ConstraintActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,15 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".OneTimeRequest1.OneTimeWorkRequestActivity"/>
-        <activity android:name=".PeriodicRequest2.PeriodicWorkRequestActivity"/>
-        <activity android:name=".ReceivingData4.ReceivingDataActivity"/>
-        <activity android:name=".SendingData3.SendingAndReceivingActivity"/>
-
-
-
-
+        <activity android:name=".OneTimeRequest1.OneTimeWorkRequestActivity" />
+        <activity android:name=".PeriodicRequest2.PeriodicWorkRequestActivity" />
+        <activity android:name=".ReceivingData4.ReceivingDataActivity" />
+        <activity android:name=".SendingData3.SendingAndReceivingActivity" />
     </application>
 
 </manifest>

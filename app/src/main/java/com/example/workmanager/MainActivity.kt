@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.work.OneTimeWorkRequest
 import androidx.work.PeriodicWorkRequest
+import com.example.workmanager.Constraints5.ConstraintActivity
 import com.example.workmanager.OneTimeRequest1.OneTimeWorkRequestActivity
 import com.example.workmanager.PeriodicRequest2.PeriodicWorkRequestActivity
 import com.example.workmanager.ReceivingData4.ReceivingDataActivity
@@ -31,6 +32,11 @@ class MainActivity : AppCompatActivity() {
         }
         btn_receivedata.setOnClickListener {
             val intent = Intent(this, SendingAndReceivingActivity::class.java)
+            startActivity(intent)
+
+        }
+        btn_constraint.setOnClickListener {
+            val intent = Intent(this, ConstraintActivity::class.java)
             startActivity(intent)
 
         }
